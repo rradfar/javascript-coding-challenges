@@ -6,7 +6,8 @@
 
 |  Kyu  | Questions                                   | Easy  | Medium | Hard  |
 | :---: | :------------------------------------------ | :---: | :----: | :---: |
-|   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |   ⭐   |        |
+|   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |   ⭐   |        |       |
+|   7   | [Vowel Count](#vowel-count)                 |   ⭐   |        |       |
 
 ---
 
@@ -47,6 +48,48 @@ console.log(solution(10));  // 23
 console.log(solution(20));  // 78
 console.log(solution(200)); // 9168
 ```
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
+
+## Vowel Count
+
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+```js
+const getCount = str => {
+  // Your solution
+}
+
+console.log(getCount('my pyx')); // 0
+console.log(getCount('pear tree')); // 4
+console.log(getCount('abracadabra')); // 5
+console.log(getCount('o a kak ushakov lil vo kashu kakao')); // 13
+```
+
+<details><summary>Solution</summary>
+
+```js
+const getCount = str => {
+  let vowelsCount = 0;
+  for (let char of str) {
+    if ('aeiou'.includes(char)) vowelsCount++;
+  }
+  return vowelsCount;
+};
+
+console.log(getCount('my pyx')); // 0
+console.log(getCount('pear tree')); // 4
+console.log(getCount('abracadabra')); // 5
+console.log(getCount('o a kak ushakov lil vo kashu kakao')); // 13
+```
+
 </details>
 
 ---
