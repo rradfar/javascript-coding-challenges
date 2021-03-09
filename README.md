@@ -4,12 +4,47 @@
 
 ## Challenges
 
-|  Kyu  | Questions                                   | Easy  | Medium | Hard  |
-| :---: | :------------------------------------------ | :---: | :----: | :---: |
-|   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |   ⭐   |        |       |
-|   7   | [Vowel Count](#vowel-count)                 |   ⭐   |        |       |
+|  Kyu  | Questions                                   |
+| :---: | :------------------------------------------ |
+|   8   | [Even or Odd](#even-or-odd)                 |
+|   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |
+|   7   | [Vowel Count](#vowel-count)                 |
 
 ---
+
+## Even or Odd
+
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+```js
+const even_or_odd = number => {
+  // Your solution
+};
+
+console.log(even_or_odd(0));  // 'Even'
+console.log(even_or_odd(2));  // 'Even'
+console.log(even_or_odd(3));  // 'Odd'
+console.log(even_or_odd(-3)); // 'Odd'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const even_or_odd = number => {
+  return number % 2 === 0 ? 'Even' : 'Odd';
+};
+
+console.log(even_or_odd(0));  // 'Even'
+console.log(even_or_odd(2));  // 'Even'
+console.log(even_or_odd(3));  // 'Odd'
+console.log(even_or_odd(-3)); // 'Odd'
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
 
 ## Multiples of 3 or 5
 
