@@ -6,12 +6,49 @@
 
 |  Kyu  | Questions                                   |
 | :---: | :------------------------------------------ |
+|   8   | [Century From Year](#century-from-year)               |
 |   8   | [Even or Odd](#even-or-odd)                 |
 |   8   | [Keep Hydrated!](#keep-hydrated)                 |
 |   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |
 |   7   | [Vowel Count](#vowel-count)                 |
 
 ---
+
+## Century From Year
+
+The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc. Given a year, return the century it is in.
+
+```js
+const century = year => {
+  // Your solution
+}
+
+console.log(century(1705)); // 18
+console.log(century(1900)); // 19
+console.log(century(1601)); // 17
+console.log(century(2000)); // 20
+console.log(century(89)); // 1
+```
+
+<details><summary>Solution</summary>
+
+```js
+const century = year => {
+  return Math.ceil(year / 100); 
+}
+
+console.log(century(1705)); // 18
+console.log(century(1900)); // 19
+console.log(century(1601)); // 17
+console.log(century(2000)); // 20
+console.log(century(89)); // 1
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
 
 ## Even or Odd
 
