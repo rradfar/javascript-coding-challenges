@@ -9,6 +9,7 @@
 |   8   | [Century From Year](#century-from-year)               |
 |   8   | [Even or Odd](#even-or-odd)                 |
 |   6   | [Find the Odd Int](#find-the-odd-int)                 |
+|   8   | [Is n Divisible by x and y?](#is-n-divisible-by-x-and-y)               |
 |   8   | [Keep Hydrated!](#keep-hydrated)                 |
 |   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |
 |   7   | [Vowel Count](#vowel-count)                 |
@@ -115,6 +116,40 @@ console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])); // -1
 console.log(findOdd([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10])); // 1
 console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1])); // 10
 console.log(findOdd([10])); // 10
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
+
+## Is n Divisible by x and y?
+
+Create a function that checks if a number `n` is divisible by two numbers `x` AND `y`. All inputs are positive, non-zero digits.
+
+```js
+const isDivisible = (n, x, y) => {
+  // Your solution
+}
+
+console.log(isDivisible(3, 3, 4)); // false
+console.log(isDivisible(12, 3, 4)); // true
+console.log(isDivisible(8, 3, 4)); // false
+console.log(isDivisible(48, 3, 4)); // true
+```
+
+<details><summary>Solution</summary>
+
+```js
+const isDivisible = (n, x, y) => {
+  return (n % x === 0) && (n % y ===0);
+}
+
+console.log(isDivisible(3, 3, 4)); // false
+console.log(isDivisible(12, 3, 4)); // true
+console.log(isDivisible(8, 3, 4)); // false
+console.log(isDivisible(48, 3, 4)); // true
 ```
 
 </details>
