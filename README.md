@@ -13,6 +13,7 @@
 |   8   | [Is n Divisible by x and y?](#is-n-divisible-by-x-and-y)               |
 |   8   | [Keep Hydrated!](#keep-hydrated)                 |
 |   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |
+|   8   | [Returning Strings](#returning-strings)       |
 |   7   | [Vowel Count](#vowel-count)                 |
 
 ---
@@ -271,6 +272,36 @@ console.log(solution(10));  // 23
 console.log(solution(20));  // 78
 console.log(solution(200)); // 9168
 ```
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
+
+## Returning Strings
+
+Write a function that given the input string `name`, returns the greeting statement `Hello, <name> how are you doing today?`
+
+```js
+const greet = name => {
+  //Your solution
+}
+
+console.log(greet("Ryan")); // "Hello, Ryan how are you doing today?"
+console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
+```
+
+<details><summary>Solution</summary>
+
+```js
+const greet = name => {
+  return `Hello, ${name} how are you doing today?`;
+}
+
+console.log(greet("Ryan")); // "Hello, Ryan how are you doing today?"
+console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
+```
+
 </details>
 
 ---
