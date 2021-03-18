@@ -4,17 +4,18 @@
 
 ## Challenges
 
-|  Kyu  | Questions                                   |
-| :---: | :------------------------------------------ |
-|   8   | [Beginner Series #2 Clock](#beginner-series-2-clock)               |
-|   8   | [Century From Year](#century-from-year)               |
-|   8   | [Even or Odd](#even-or-odd)                 |
-|   6   | [Find the Odd Int](#find-the-odd-int)                 |
-|   8   | [Is n Divisible by x and y?](#is-n-divisible-by-x-and-y)               |
-|   8   | [Keep Hydrated!](#keep-hydrated)                 |
-|   6   | [Multiples of 3 or 5](#multiples-of-3-or-5) |
-|   8   | [Returning Strings](#returning-strings)       |
-|   7   | [Vowel Count](#vowel-count)                 |
+| Questions                                   |
+| :------------------------------------------ |
+| [Beginner Series #2 Clock](#beginner-series-2-clock)               |
+| [Century From Year](#century-from-year)               |
+| [Disemvowel Trolls](#disemvowel-trolls)               |
+| [Even or Odd](#even-or-odd)                 |
+| [Find the Odd Int](#find-the-odd-int)                 |
+| [Is n Divisible by x and y?](#is-n-divisible-by-x-and-y)               |
+| [Keep Hydrated!](#keep-hydrated)                 |
+| [Multiples of 3 or 5](#multiples-of-3-or-5) |
+| [Returning Strings](#returning-strings)       |
+| [Vowel Count](#vowel-count)                 |
 
 ---
 
@@ -81,6 +82,34 @@ console.log(century(1900)); // 19
 console.log(century(1601)); // 17
 console.log(century(2000)); // 20
 console.log(century(89)); // 1
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#challenges)**
+
+## Disemvowel Trolls
+
+Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and returns a new string with all vowels (`a, e, i, o, u`) removed.
+
+```js
+const disemvowel = str => {
+  // Your solution
+}
+
+console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr lsrs LL!'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const disemvowel = str => {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr lsrs LL!'
 ```
 
 </details>
