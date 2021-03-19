@@ -1,8 +1,6 @@
 ![javascript](images/logo-js.png)
 
-# [Codewars](https://www.codewars.com/) JavaScript Solutions
-
-## Challenges
+# JavaScript Coding Challenges
 
 | Questions                                   |
 | :------------------------------------------ |
@@ -11,6 +9,7 @@
 | [Disemvowel Trolls](#disemvowel-trolls)               |
 | [Even or Odd](#even-or-odd)                 |
 | [Find the Odd Int](#find-the-odd-int)                 |
+| [Get the Middle Character](#get-the-middle-character)                 |
 | [Is n Divisible by x and y?](#is-n-divisible-by-x-and-y)               |
 | [Keep Hydrated!](#keep-hydrated)                 |
 | [Multiples of 3 or 5](#multiples-of-3-or-5) |
@@ -41,18 +40,12 @@ console.log(past(1, 1, 1)); // 3661000
 const past = (h, m, s) => {
   return ((h * 60 * 60) + (m * 60) + s) * 1000;
 }
-
-console.log(past(0, 0, 0)); // 0
-console.log(past(0, 1, 1)); // 61000
-console.log(past(1, 0, 0)); // 3600000
-console.log(past(1, 0, 1)); // 3601000
-console.log(past(1, 1, 1)); // 3661000
 ```
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Century From Year
 
@@ -76,19 +69,13 @@ console.log(century(89)); // 1
 const century = year => {
   return Math.ceil(year / 100); 
 }
-
-console.log(century(1705)); // 18
-console.log(century(1900)); // 19
-console.log(century(1601)); // 17
-console.log(century(2000)); // 20
-console.log(century(89)); // 1
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Disemvowel Trolls
 
@@ -108,15 +95,13 @@ console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr ls
 const disemvowel = str => {
   return str.replace(/[aeiou]/gi, '');
 }
-
-console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr lsrs LL!'
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Even or Odd
 
@@ -139,18 +124,13 @@ console.log(even_or_odd(-3)); // 'Odd'
 const even_or_odd = number => {
   return number % 2 === 0 ? 'Even' : 'Odd';
 };
-
-console.log(even_or_odd(0));  // 'Even'
-console.log(even_or_odd(2));  // 'Even'
-console.log(even_or_odd(3));  // 'Odd'
-console.log(even_or_odd(-3)); // 'Odd'
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Find the Odd Int
 
@@ -175,20 +155,43 @@ console.log(findOdd([10])); // 10
 const findOdd = arr => {
   return arr.reduce((a, b) => a ^ b);
 }
-
-console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); // 5
-console.log(findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])); // 5
-console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])); // -1
-console.log(findOdd([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10])); // 1
-console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1])); // 10
-console.log(findOdd([10])); // 10
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
+
+## Get the Middle Character
+
+Given a word, your job is to return the middle character(s) of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+```js
+const getMiddle = str => {
+  // Your solution
+}
+
+console.log(getMiddle('test'));     // 'es'
+console.log(getMiddle('testing'));  // 't'
+console.log(getMiddle('middle'));   // 'dd'
+console.log(getMiddle('A'));        // 'A'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const getMiddle = str => {
+  const midIndex = str.length / 2 ;
+  return str.length % 2 ? str[Math.floor(midIndex)] : str[midIndex - 1] + str[midIndex];
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Is n Divisible by x and y?
 
@@ -211,18 +214,13 @@ console.log(isDivisible(48, 3, 4)); // true
 const isDivisible = (n, x, y) => {
   return (n % x === 0) && (n % y ===0);
 }
-
-console.log(isDivisible(3, 3, 4)); // false
-console.log(isDivisible(12, 3, 4)); // true
-console.log(isDivisible(8, 3, 4)); // false
-console.log(isDivisible(48, 3, 4)); // true
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Keep Hydrated!
 
@@ -248,21 +246,13 @@ console.log(litres(1787)); // 893
 const litres = time => {
   return Math.floor(time / 2);
 }
-
-console.log(litres(0)); // 0
-console.log(litres(2)); // 1
-console.log(litres(1.4)); // 0
-console.log(litres(12.3)); // 6
-console.log(litres(0.82)); // 0
-console.log(litres(11.8)); // 5
-console.log(litres(1787)); // 893
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Multiples of 3 or 5
 
@@ -294,18 +284,12 @@ const solution = number => {
   }
   return sum;
 };
-
-console.log(solution(0));   // 0
-console.log(solution(-15)); // 0
-console.log(solution(10));  // 23
-console.log(solution(20));  // 78
-console.log(solution(200)); // 9168
 ```
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Returning Strings
 
@@ -326,16 +310,13 @@ console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
 const greet = name => {
   return `Hello, ${name} how are you doing today?`;
 }
-
-console.log(greet("Ryan")); // "Hello, Ryan how are you doing today?"
-console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
 
 ## Vowel Count
 
@@ -362,15 +343,10 @@ const getCount = str => {
   }
   return vowelsCount;
 };
-
-console.log(getCount('my pyx')); // 0
-console.log(getCount('pear tree')); // 4
-console.log(getCount('abracadabra')); // 5
-console.log(getCount('o a kak ushakov lil vo kashu kakao')); // 13
 ```
 
 </details>
 
 ---
 
-**[⬆ Back to Top](#challenges)**
+**[⬆ Back to Top](#javascript-coding-challenges)**
