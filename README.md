@@ -410,3 +410,31 @@ const createPhoneNumber = numbers => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Square Every Digit
+
+Given an integer, your task is to square every digit of it and concatenate them to produce a new integer.
+
+```js
+const squareDigits = num => {
+  // Your solution
+}
+
+console.log(squareDigits(2112)); // 4114
+console.log(squareDigits(3212)); // 9414
+console.log(squareDigits(9159)); // 8112581
+```
+
+<details><summary>Solution</summary>
+
+```js
+const squareDigits = num => {
+  return Number(num.toString().split('').map(ele => ele * ele).join(''));
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
