@@ -438,3 +438,34 @@ const squareDigits = num => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## You're a square!
+
+Write a function that given an integer, checks to see if it is a square number. A square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+```js
+const isSquare = n => {
+  // Your solution
+};
+
+console.log(isSquare(0));   // true
+console.log(isSquare(4));   // true
+console.log(isSquare(25));  // true
+console.log(isSquare(3));   // false
+console.log(isSquare(93));  // false
+console.log(isSquare(-1));  // false
+```
+
+<details><summary>Solution</summary>
+
+```js
+const isSquare = n => {
+  return Math.sqrt(n) % 1 === 0;
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
