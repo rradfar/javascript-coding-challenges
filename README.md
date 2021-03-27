@@ -551,7 +551,34 @@ console.log(accum('RqaEzty'));  // 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
 const accum = str => {
   return str.split('').map((ele, index) => ele.toUpperCase() + ele.toLowerCase().repeat(index)).join('-');
 }
+```
 
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Stop gninnipS My sdroW!
+
+Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces.
+
+```js
+const spinWords = str => {
+  // Your solution
+}
+
+console.log(spinWords('This is a test')); // 'This is a test'
+console.log(spinWords('Hey fellow warriors')); // 'Hey wollef sroirraw'
+console.log(spinWords('This is another test')); // 'This is rehtona test'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const spinWords = str => {
+  return str.split(' ').map(word => word.length < 5 ? word : word.split('').reverse().join('')).join(' ');
+}
 ```
 
 </details>
