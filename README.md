@@ -586,3 +586,31 @@ const spinWords = str => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Shortest Word
+
+Given a non-empty string of words, return the length of the shortest word(s).
+
+```js
+const findShort = str => {
+  // Your solution
+}
+
+console.log(findShort("Test where final word shortest see")); // 3
+console.log(findShort("Lets all go on holiday somewhere very cold")); // 2
+console.log(findShort("i want to travel the world writing code one day")); // 1
+```
+
+<details><summary>Solution</summary>
+
+```js
+const findShort = str => {
+  return Math.min(...str.split(' ').map(word => word.length));
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
