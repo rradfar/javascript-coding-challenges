@@ -682,3 +682,33 @@ const XO = str => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Sum of Positives
+
+Given an array of numbers, write a function that returns the sum of all of the positives ones. If the array is empty, the sum should be `0`.
+
+```js
+const positiveSum = arr => {
+  // Your solution
+};
+
+console.log(positiveSum([1, 2, 3, 4, 5])); // 15
+console.log(positiveSum([1, -2, 3, 4, 5])); // 13
+console.log(positiveSum([-1, 2, 3, 4, -5])); // 9
+console.log(positiveSum([-1, -2, -3, -4, -5])); // 0
+console.log(positiveSum([])); // 0
+```
+
+<details><summary>Solution</summary>
+
+```js
+const positiveSum = arr => {
+  return arr.filter(ele => ele > 0).reduce((a, b) => a + b, 0);
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
