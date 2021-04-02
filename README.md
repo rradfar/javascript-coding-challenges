@@ -745,3 +745,33 @@ const findOutlier = arr => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Array.diff
+
+Write a function that subtracts one list from another and returns the result. It should remove all values from array `a`, which are present in array `b`.
+
+```js
+const arrayDiff = (a, b) => {
+  // Your solution
+};
+
+console.log(arrayDiff([1,8,2], []));    // [1, 8, 2]
+console.log(arrayDiff([1,2,3], [1,2])); // [3]
+console.log(arrayDiff([3,4], [3]));     // [4]
+console.log(arrayDiff([], [4,5]));      // []
+```
+
+<details><summary>Solution</summary>
+
+```js
+const arrayDiff = (a, b) => {
+  return a.filter(ele => !b.includes(ele));
+};
+
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
