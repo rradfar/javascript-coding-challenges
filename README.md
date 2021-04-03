@@ -767,7 +767,33 @@ console.log(arrayDiff([], [4,5]));      // []
 const arrayDiff = (a, b) => {
   return a.filter(ele => !b.includes(ele));
 };
+```
 
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Capitalize Words
+
+Write a function that capitalizes each word in a given input string.
+
+```js
+String.prototype.capitalize = function () {
+  // Your solution
+};
+
+var str = "How can mirrors be real if our eyes aren't real";
+console.log(str.capitalize()); // 'How Can Mirrors Be Real If Our Eyes Aren't Real'
+```
+
+<details><summary>Solution</summary>
+
+```js
+String.prototype.capitalize = function () {
+  return this.split(' ').map(ele => ele[0].toUpperCase() + ele.slice(1)).join(' ');
+};
 ```
 
 </details>
