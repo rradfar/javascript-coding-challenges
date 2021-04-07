@@ -866,3 +866,37 @@ const isIsogram = str => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## FizzBuzz
+
+Write a program that prints the numbers from 1 to 100. But for multiples of 
+`3` prints "Fizz" instead of the number and for the multiples of `5` prints 
+"Buzz". For numbers which are multiples of both `3` and `5` prints "FizzBuzz".
+
+```js
+const fizzBuzz = () => {
+  // Your solution
+}
+
+fizzBuzz(); // 1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, ...
+```
+
+<details><summary>Solution</summary>
+
+```js
+const fizzBuzz = () => {
+  let result;
+  for (let i = 1; i <= 100; i++) {
+    result = '';
+    if (i % 3 === 0) result += 'Fizz';
+    if (i % 5 === 0) result += 'Buzz';
+    console.log(result || i);
+  }
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
