@@ -900,3 +900,44 @@ const fizzBuzz = () => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Counting Duplicates
+
+Write a function that will return the count of distinct case-insensitive alphanumeric characters that occur more than once in the input string.
+
+```js
+const duplicateCount = text => {
+  // Your solution
+}
+
+console.log(duplicateCount("")); // 0
+console.log(duplicateCount("abcde")); // 0
+console.log(duplicateCount("aabbcde")); // 2
+console.log(duplicateCount("aabBcde")); // 2, "should ignore case"
+console.log(duplicateCount("Indivisibility")); // 1
+console.log(duplicateCount("Indivisibilities")); // 2, "characters may not be adjacent"
+```
+
+<details><summary>Solution</summary>
+
+```js
+const duplicateCount = text => {
+  text = text.toLowerCase();
+  const freq = {};
+  for (let letter of text) {
+    freq[letter] = (freq[letter] || 0) + 1;
+  }
+  
+  let result = 0;
+  for (let letter in freq) {
+    if (freq[letter] > 1) result++;
+  }
+  return result;
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
