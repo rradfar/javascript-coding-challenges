@@ -941,3 +941,39 @@ const duplicateCount = text => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Duplicate Encoder
+
+Write a function that converts a string to a new string where each character in the new string is `(` if that character appears only once in the original string, or `)` if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+```js
+const duplicateEncode = word => {
+  // Your solution
+}
+
+console.log(duplicateEncode('din'));      // '((('
+console.log(duplicateEncode('(( @'));     // '))(('
+console.log(duplicateEncode('recede'));   // '()()()'
+console.log(duplicateEncode('Success'));  // ')())())'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const duplicateEncode = word => {
+  word = word.toLowerCase();
+  let result = '';
+  for (let char of word) {
+    word.indexOf(char) !== word.lastIndexOf(char)
+    ? result += ')'
+    : result += '(';
+  }
+  return result;
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
