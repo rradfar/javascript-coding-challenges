@@ -2,7 +2,7 @@
 
 # JavaScript Coding Challenges for Beginners
 
-## Multiples of 3 or 5
+## 1. Multiples of 3 or 5
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 
@@ -39,7 +39,7 @@ const solution = number => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Even or Odd
+## 2. Even or Odd
 
 Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
@@ -68,7 +68,7 @@ const even_or_odd = number => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Clock
+## 3. Clock
 
 The clock shows h hours (0 <= h <= 23), m minutes (0 <= m <= 59) and s seconds (0 <= s <= 59) after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
 
@@ -97,7 +97,7 @@ const past = (h, m, s) => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Returning Strings
+## 4. Returning Strings
 
 Write a function that given the input string `name`, returns the greeting statement `Hello, <name> how are you doing today?`
 
@@ -124,7 +124,7 @@ const greet = name => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Century From Year
+## 5. Century From Year
 
 The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc. Given a year, return the century it is in.
 
@@ -154,7 +154,7 @@ const century = year => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Keep Hydrated!
+## 6. Keep Hydrated!
 
 Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
 
@@ -186,7 +186,7 @@ const litres = time => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Is n Divisible by x and y?
+## 7. Is n Divisible by x and y?
 
 Create a function that checks if a number `n` is divisible by two numbers `x` AND `y`. All inputs are positive, non-zero digits.
 
@@ -215,7 +215,7 @@ const isDivisible = (n, x, y) => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Vowel Count
+## 8. Vowel Count
 
 Return the number (count) of vowels (a, e, i, o, u) in the given string. The input string will only consist of lower case letters and/or spaces.
 
@@ -248,7 +248,7 @@ const getCount = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Disemvowel Trolls
+## 9. Disemvowel Trolls
 
 Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and returns a new string with all vowels (`a, e, i, o, u`) removed.
 
@@ -274,7 +274,7 @@ const disemvowel = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Find the Odd Int
+## 10. Find the Odd Int
 
 Given an array of integers, find the one that appears an odd number of times. There will always be only one integer that appears an odd number of times.
 
@@ -305,7 +305,7 @@ const findOdd = arr => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Get the Middle Character
+## 11. Get the Middle Character
 
 Given a word, your job is to return the middle character(s) of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
@@ -335,7 +335,7 @@ const getMiddle = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Who likes it?
+## 12. Who likes it?
 
 You probably know the "like" system from Facebook and other social media. People can "like" posts, photos or other items. We want to create the text that should be displayed next to such an item.
 
@@ -379,7 +379,7 @@ const likes = names => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Create Phone Number
+## 13. Create Phone Number
 
 Write a function that accepts an array of 10 integers (between 0 and 9), and returns a string of those numbers in the form of a phone number.
 
@@ -411,7 +411,7 @@ const createPhoneNumber = numbers => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Square Every Digit
+## 14. Square Every Digit
 
 Given an integer, your task is to square every digit of it and concatenate them to produce a new integer.
 
@@ -439,7 +439,7 @@ const squareDigits = num => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## You're a square!
+## 15. You're a square!
 
 Write a function that given an integer, checks to see if it is a square number. A square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
 
@@ -470,7 +470,7 @@ const isSquare = n => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Highest and Lowest
+## 16. Highest and Lowest
 
 Given a string of space-separated numbers, write a function that returns the highest and lowest numbers. There will always be at least one number in the input string.
 
@@ -500,7 +500,7 @@ const highAndLow = numbers => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Descending Order
+## 17. Descending Order
 
 Write a function that takes any non-negative integer as an argument and returns it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 
@@ -531,7 +531,7 @@ const descendingOrder = n => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Mumbling
+## 18. Mumbling
 
 Given a string which includes only letters, write a function that produces the outputs below.
 
@@ -559,7 +559,7 @@ const accum = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Stop gninnipS My sdroW!
+## 19. Stop gninnipS My sdroW!
 
 Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed. Strings passed in will consist of only letters and spaces.
 
@@ -587,7 +587,7 @@ const spinWords = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Shortest Word
+## 20. Shortest Word
 
 Given a non-empty string of words, return the length of the shortest word(s).
 
@@ -615,7 +615,7 @@ const findShort = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Bit Counting
+## 21. Bit Counting
 
 Write a function that takes an integer as input, and returns the number of bits that are equal to `1` in the binary representation of that number. You can guarantee that input is non-negative. For example the binary representation of `1234` is `10011010010`, so the function should return `5` in this case.
 
@@ -644,7 +644,7 @@ const countBits = n => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Exes and Ohs
+## 22. Exes and Ohs
 
 Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The input string can contain any character.
 
@@ -683,7 +683,7 @@ const XO = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Sum of Positives
+## 23. Sum of Positives
 
 Given an array of numbers, write a function that returns the sum of all of the positives ones. If the array is empty, the sum should be `0`.
 
@@ -713,7 +713,7 @@ const positiveSum = arr => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Find The Parity Outlier
+## 24. Find The Parity Outlier
 
 You are given an array of at least length 3 containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer `N`. Write a function that takes the array as an argument and returns this "outlier" `N`.
 
@@ -746,7 +746,7 @@ const findOutlier = arr => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Array.diff
+## 25. Array.diff
 
 Write a function that subtracts one list from another and returns the result. It should remove all values from array `a`, which are present in array `b`.
 
@@ -775,7 +775,7 @@ const arrayDiff = (a, b) => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Capitalize Words
+## 26. Capitalize Words
 
 Write a function that capitalizes each word in a given input string.
 
@@ -802,7 +802,7 @@ String.prototype.capitalize = function () {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Complementary DNA
+## 27. Complementary DNA
 
 DNA is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms. In DNA strings, symbols "A" and "T" are complements of each other, as are "C" and "G". Given one side of the DNA, write a function that returns the other complementary side. The DNA strand is never empty.
 
@@ -836,7 +836,7 @@ const DNAStrand = dna => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Isograms
+## 28. Isograms
 
 An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
@@ -867,7 +867,7 @@ const isIsogram = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## FizzBuzz
+## 29. FizzBuzz
 
 Write a program that prints the numbers from 1 to 100. But for multiples of 
 `3` prints "Fizz" instead of the number and for the multiples of `5` prints 
@@ -901,7 +901,7 @@ const fizzBuzz = () => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Counting Duplicates
+## 30. Counting Duplicates
 
 Write a function that will return the count of distinct case-insensitive alphanumeric characters that occur more than once in the input string.
 
@@ -942,7 +942,7 @@ const duplicateCount = text => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Duplicate Encoder
+## 31. Duplicate Encoder
 
 Write a function that converts a string to a new string where each character in the new string is `(` if that character appears only once in the original string, or `)` if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
 
@@ -967,6 +967,39 @@ const duplicateEncode = word => {
     word.indexOf(char) !== word.lastIndexOf(char)
     ? result += ')'
     : result += '(';
+  }
+  return result;
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 32. Reversed Strings
+
+Write a function that reverses the string that is passed to it. For this challenge, you may __NOT__ use the JavaScript built-in `reverse()` method.
+
+```js
+const reverseString = str => {
+  // Your solution
+}
+
+console.log(reverseString('hello'));  // 'olleh'
+console.log(reverseString('world'));  // 'dlrow'
+console.log(reverseString(''));       // ''
+console.log(reverseString('h'));      // 'h'
+```
+
+<details><summary>Solution</summary>
+
+```js
+const reverseString = str => {
+  let result = '';
+  for (let char of str) {
+    result = char + result;
   }
   return result;
 }
