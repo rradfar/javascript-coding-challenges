@@ -1291,7 +1291,7 @@ const songDecoder = song => {
 
 ## 40. Valid Parentheses
 
-Given a non-empty string `s` containing just the characters `(`, `)`, `{`, `}`, `[` and `]`, determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets, and open brackets are closed in the correct order.
+Given a non-empty string `s` containing just the characters `(`, `)`, `{`, `}`, `[`, `]`, determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets, and open brackets are closed in the correct order.
 
 ```js
 const isValid = s => {
@@ -1325,6 +1325,40 @@ const isValid = s => {
     }
   }
   return !stack.length;
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## Reverse Integer
+
+Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range [-2<sup>31</sup>, 2<sup>31</sup> - 1], then return 0.
+
+```js
+const reverse = x => {
+  // Your solution
+};
+
+console.log(reverse(0)); // 0
+console.log(reverse(120)); // 21
+console.log(reverse(123)); // 321
+console.log(reverse(-123)); // -321
+console.log(reverse(1534236469)); // 0
+```
+
+<details><summary>Solution</summary>
+
+```js
+const reverse = x => {
+  const MAX = Math.pow(2, 31) - 1;
+  const MIN = -1 * Math.pow(2, 31);
+  let arr = Math.abs(x).toString().split('');
+  const reversed = Math.sign(x) * Number(arr.reverse().join(''));
+  return reversed < MIN || reversed > MAX ? 0 : reversed;
 };
 ```
 
