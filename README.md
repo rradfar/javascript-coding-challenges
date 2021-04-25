@@ -1288,3 +1288,48 @@ const songDecoder = song => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 40. Valid Parentheses
+
+Given a non-empty string `s` containing just the characters `(`, `)`, `{`, `}`, `[` and `]`, determine if the input string is valid. An input string is valid if open brackets are closed by the same type of brackets, and open brackets are closed in the correct order.
+
+```js
+const isValid = s => {
+  // Your solution
+};
+
+console.log(isValid('[')); //false
+console.log(isValid('()')); //true
+console.log(isValid('(]')); //false
+console.log(isValid('{[]}')); //true
+console.log(isValid('([)]')); //false
+console.log(isValid('()[]{}')); //true
+```
+
+<details><summary>Solution</summary>
+
+```js
+const isValid = s => {
+  const stack = [];
+  const pairs = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+  };
+
+  for (const char of s) {
+    if (pairs[char]) {
+      stack.push(char);
+    } else if (pairs[stack.pop()] !== char) {
+      return false;
+    }
+  }
+  return !stack.length;
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
