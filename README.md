@@ -1334,7 +1334,7 @@ const isValid = s => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## Reverse Integer
+## 41. Reverse Integer
 
 Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range [-2<sup>31</sup>, 2<sup>31</sup> - 1], then return 0.
 
@@ -1359,6 +1359,45 @@ const reverse = x => {
   let arr = Math.abs(x).toString().split('');
   const reversed = Math.sign(x) * Number(arr.reverse().join(''));
   return reversed < MIN || reversed > MAX ? 0 : reversed;
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 42. Remove Duplicates from Sorted Array
+
+Given a sorted array `nums`, write a function that removes the duplicates in-place such that each element appears only once and returns the new length. Do **not** allocate extra space for another array, you must do this by modifying the input array in-place with `O(1)` extra memory.
+
+```js
+const removeDuplicates = nums => {
+   // Your solution
+};
+
+console.log(removeDuplicates([1, 1, 2])); // 2 (because [1, 2] has length 2)
+console.log(removeDuplicates([0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5
+console.log(removeDuplicates([])); // 0
+```
+
+<details><summary>Solution</summary>
+
+```js
+const removeDuplicates = nums => {
+  if (nums.length <= 1) return nums.length;
+  let currentIndex = 0;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[currentIndex] !== nums[i]) {
+      currentIndex++;
+      nums[currentIndex] = nums[i];
+    }
+  }
+  
+  nums.length = currentIndex + 1;
+  return nums.length;
 };
 ```
 
