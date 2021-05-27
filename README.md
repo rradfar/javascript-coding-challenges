@@ -1603,3 +1603,34 @@ const cakes = (recipe, available) => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 48. Count characters in your string
+
+Write a function that counts the frequency of all the characters in a given string.
+
+```js
+const count = string => {
+  // Your solution
+}
+
+console.log(count('')); // {}
+console.log(count('aba')); // { a: 2, b: 1 }
+```
+
+<details><summary>Solution</summary>
+
+```js
+const count = string => {
+  const result = {};
+  for (let char of string) {
+     result[char] = (result[char] || 0) + 1;
+  }
+  return result;
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
