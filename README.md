@@ -1634,3 +1634,32 @@ const count = string => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 49. Break camelCase
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+```js
+const solution = str => {
+   // Your solution
+}
+
+console.log(solution('camelCasingHere')); // camel Casing Here
+console.log(solution('No Camels here')); // No Camels here
+console.log(solution('ABC')); // ABC
+console.log(solution('')); // ''
+```
+
+<details><summary>Solution</summary>
+
+```js
+const solution = str => {
+   return str.replace(/([a-z])([A-Z])/g, '$1 $2');
+}
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
