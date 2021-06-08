@@ -1561,7 +1561,7 @@ const generateHashtag = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## 47. Pete, the baker
+## 47. Pete, the Baker
 
 Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
 
@@ -1604,7 +1604,7 @@ const cakes = (recipe, available) => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## 48. Count characters in your string
+## 48. Count Characters in Your String
 
 Write a function that counts the frequency of all the characters in a given string.
 
@@ -1664,7 +1664,7 @@ const solution = str => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## 50.  Check if Word Equals Summation of Two Words
+## 50. Check if Word Equals Summation of Two Words
 
 Let's assume that the numeric value of a letter is its position in the alphabet starting from `0` (i.e. `a -> 0, b -> 1, c -> 2`, etc.). Similarly, the numerical value of a string `str` consisting of some lowercase English letters is the concatenation (not sum!) of the numeric values of each letter in `str`, which is then converted into an integer. For example, if `str = 'acb'`, we concatenate each letter's numeric value, resulting in `021` which is then converted to integer `21`. 
 
@@ -1675,19 +1675,19 @@ const isSumEqual = (firstWord, secondWord, targetWord) => {
   // Your solution
 };
 
-console.log(isSumEqual('acb', 'cba', 'cdb'));
+console.log(isSumEqual('acb', 'cba', 'cdb')); // true
 // The numerical value of firstWord 'acb' is '021' -> 21
 // The numerical value of secondWord 'cba' is '210' -> 210
 // The numerical value of targetWord 'cdb' is '231' -> 231
 // So we return true because 21 + 210 == 231
 
-console.log(isSumEqual('aaa', 'a', 'aab'));
+console.log(isSumEqual('aaa', 'a', 'aab')); // false
 // The numerical value of firstWord 'aaa' is '000' -> 0
 // The numerical value of secondWord 'a' is '0' -> 0
 // The numerical value of targetWord 'aab' is '001' -> 1
 // So we return false because 0 + 0 != 1
 
-console.log(isSumEqual('aaa', 'a', 'aaaa'));
+console.log(isSumEqual('aaa', 'a', 'aaaa')); // true
 // The numerical value of firstWord 'aaa' is '000' -> 0
 // The numerical value of secondWord 'a' is '0' -> 0
 // The numerical value of targetWord 'aaaa' is '0000' -> 0
@@ -1711,6 +1711,39 @@ const getNumericValue = str => {
 const isSumEqual = (firstWord, secondWord, targetWord) => {
   return getNumericValue(firstWord) + getNumericValue(secondWord) === getNumericValue(targetWord);
 };
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 51. Extract the Domain Name From a URL
+
+Write a function that given an input URL, returns its domain name.
+
+```js
+const domainName = url => {
+  // Your solution
+}
+
+console.log(domainName('www.google.ca')); // google
+console.log(domainName('http://google.com')); // google
+console.log(domainName('https://google.com')); // google
+console.log(domainName('http://google.co.jp')); // google
+console.log(domainName('https://www.google.com')); // google
+```
+
+<details><summary>Solution</summary>
+
+```js
+const domainName = url => {
+  return url.replace(/(www\.|.*\/\/|\..+)/g, '');
+}
+
+// Alternative solution with no regex
+// const domainName = url => url.replace('http://', '').replace('https://', '').replace('www.', '').split('.')[0];
 ```
 
 </details>
