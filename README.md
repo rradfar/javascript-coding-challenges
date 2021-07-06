@@ -1861,3 +1861,33 @@ const convertToRoman = number => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 54. Scramble
+
+Write a function that accepts two strings and returns `true` if some or all of the characters in the first string can be rearranged to match the second string.
+
+```js
+const scramble = (str1, str2) => {
+  // Your solution
+};
+
+console.log(scramble('scriptjava', 'javascript'));    // true
+console.log(scramble('scriptingjava', 'javascript')); // true
+console.log(scramble('scriptsjava', 'javascripts'));  // true
+console.log(scramble('jscripts', 'javascript'));      // false
+console.log(scramble('javscripts', 'javascript'));    // false
+```
+
+<details><summary>Solution</summary>
+
+```js
+const scramble = (str1, str2) => {
+  return [...str2].every(letter => str2.split(letter).length <= str1.split(letter).length);
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
