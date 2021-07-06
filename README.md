@@ -1891,3 +1891,37 @@ const scramble = (str1, str2) => {
 ---
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 55. Wave, wAve, waVe, wavE 
+
+Write a function that turns a given string into a wave! You will be passed a string and you must return that string in an array where each letter takes turns to become uppercase. The input string will always be lowercase but may be empty. If you encounter a whitespace then pass over it.
+
+```js
+const wave = str => {
+  // Your solution
+};
+
+console.log(wave('hello')); // ['Hello', 'hEllo', 'heLlo', 'helLo', 'hellO'];
+console.log(wave(' gap ')); // [' Gap ', ' gAp ', ' gaP '];
+console.log(wave('Two words')); // ['Two words', 'tWo words', 'twO words', 'two Words', 'two wOrds', 'two woRds', 'two worDs', 'two wordS'];
+```
+
+<details><summary>Solution</summary>
+
+```js
+const wave = str => {
+  const result = [];
+  const len = str.length;
+  for (let i = 0; i < len; i++) {
+    if (str[i] !== ' ')
+      result.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
+  }
+  return result;
+};
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
