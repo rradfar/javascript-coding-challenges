@@ -13,10 +13,10 @@ const solution = number => {
   // Your solution
 };
 
-console.log(solution(0));   // 0
+console.log(solution(0)); // 0
 console.log(solution(-15)); // 0
-console.log(solution(10));  // 23
-console.log(solution(20));  // 78
+console.log(solution(10)); // 23
+console.log(solution(20)); // 78
 console.log(solution(200)); // 9168
 ```
 
@@ -33,6 +33,7 @@ const solution = number => {
   return sum;
 };
 ```
+
 </details>
 
 ---
@@ -48,9 +49,9 @@ const even_or_odd = number => {
   // Your solution
 };
 
-console.log(even_or_odd(0));  // 'Even'
-console.log(even_or_odd(2));  // 'Even'
-console.log(even_or_odd(3));  // 'Odd'
+console.log(even_or_odd(0)); // 'Even'
+console.log(even_or_odd(2)); // 'Even'
+console.log(even_or_odd(3)); // 'Odd'
 console.log(even_or_odd(-3)); // 'Odd'
 ```
 
@@ -75,7 +76,7 @@ The clock shows h hours (0 <= h <= 23), m minutes (0 <= m <= 59) and s seconds (
 ```js
 const past = (h, m, s) => {
   // Your solution
-}
+};
 
 console.log(past(0, 0, 0)); // 0
 console.log(past(0, 1, 1)); // 61000
@@ -88,9 +89,10 @@ console.log(past(1, 1, 1)); // 3661000
 
 ```js
 const past = (h, m, s) => {
-  return ((h * 60 * 60) + (m * 60) + s) * 1000;
-}
+  return (h * 60 * 60 + m * 60 + s) * 1000;
+};
 ```
+
 </details>
 
 ---
@@ -104,10 +106,10 @@ Write a function that given the input string `name`, returns the greeting statem
 ```js
 const greet = name => {
   //Your solution
-}
+};
 
-console.log(greet("Ryan")); // "Hello, Ryan how are you doing today?"
-console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
+console.log(greet('Ryan')); // "Hello, Ryan how are you doing today?"
+console.log(greet('Sara')); // "Hello, Sara how are you doing today?"
 ```
 
 <details><summary>Solution</summary>
@@ -115,7 +117,7 @@ console.log(greet("Sara")); // "Hello, Sara how are you doing today?"
 ```js
 const greet = name => {
   return `Hello, ${name} how are you doing today?`;
-}
+};
 ```
 
 </details>
@@ -131,7 +133,7 @@ The first century spans from the year 1 up to and including the year 100, The se
 ```js
 const century = year => {
   // Your solution
-}
+};
 
 console.log(century(1705)); // 18
 console.log(century(1900)); // 19
@@ -144,8 +146,8 @@ console.log(century(89)); // 1
 
 ```js
 const century = year => {
-  return Math.ceil(year / 100); 
-}
+  return Math.ceil(year / 100);
+};
 ```
 
 </details>
@@ -161,7 +163,7 @@ Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he 
 ```js
 const litres = time => {
   // Your solution
-}
+};
 
 console.log(litres(0)); // 0
 console.log(litres(2)); // 1
@@ -177,7 +179,7 @@ console.log(litres(1787)); // 893
 ```js
 const litres = time => {
   return Math.floor(time / 2);
-}
+};
 ```
 
 </details>
@@ -193,7 +195,7 @@ Create a function that checks if a number `n` is divisible by two numbers `x` AN
 ```js
 const isDivisible = (n, x, y) => {
   // Your solution
-}
+};
 
 console.log(isDivisible(3, 3, 4)); // false
 console.log(isDivisible(12, 3, 4)); // true
@@ -205,8 +207,8 @@ console.log(isDivisible(48, 3, 4)); // true
 
 ```js
 const isDivisible = (n, x, y) => {
-  return (n % x === 0) && (n % y ===0);
-}
+  return n % x === 0 && n % y === 0;
+};
 ```
 
 </details>
@@ -222,7 +224,7 @@ Return the number (count) of vowels (a, e, i, o, u) in the given string. The inp
 ```js
 const getCount = str => {
   // Your solution
-}
+};
 
 console.log(getCount('my pyx')); // 0
 console.log(getCount('pear tree')); // 4
@@ -255,7 +257,7 @@ Trolls are attacking your comment section! A common way to deal with this situat
 ```js
 const disemvowel = str => {
   // Your solution
-}
+};
 
 console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr lsrs LL!'
 ```
@@ -265,7 +267,7 @@ console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr ls
 ```js
 const disemvowel = str => {
   return str.replace(/[aeiou]/gi, '');
-}
+};
 ```
 
 </details>
@@ -281,7 +283,7 @@ Given an array of integers, find the one that appears an odd number of times. Th
 ```js
 const findOdd = arr => {
   // Your solution
-}
+};
 
 console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); // 5
 console.log(findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])); // 5
@@ -296,7 +298,7 @@ console.log(findOdd([10])); // 10
 ```js
 const findOdd = arr => {
   return arr.reduce((a, b) => a ^ b);
-}
+};
 ```
 
 </details>
@@ -312,21 +314,23 @@ Given a word, your job is to return the middle character(s) of the word. If the 
 ```js
 const getMiddle = str => {
   // Your solution
-}
+};
 
-console.log(getMiddle('test'));     // 'es'
-console.log(getMiddle('testing'));  // 't'
-console.log(getMiddle('middle'));   // 'dd'
-console.log(getMiddle('A'));        // 'A'
+console.log(getMiddle('test')); // 'es'
+console.log(getMiddle('testing')); // 't'
+console.log(getMiddle('middle')); // 'dd'
+console.log(getMiddle('A')); // 'A'
 ```
 
 <details><summary>Solution</summary>
 
 ```js
 const getMiddle = str => {
-  const midIndex = str.length / 2 ;
-  return str.length % 2 ? str[Math.floor(midIndex)] : str[midIndex - 1] + str[midIndex];
-}
+  const midIndex = str.length / 2;
+  return str.length % 2
+    ? str[Math.floor(midIndex)]
+    : str[midIndex - 1] + str[midIndex];
+};
 ```
 
 </details>
@@ -344,7 +348,7 @@ Implement a function that takes an input array, containing the names of people w
 ```js
 const likes = names => {
   // Your solution
-}
+};
 
 console.log(likes([])); // 'no one likes this'
 console.log(likes(['Peter'])); // 'Peter likes this'
@@ -367,10 +371,12 @@ const likes = names => {
   } else if (names.length === 3) {
     output = `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else {
-    output = `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+    output = `${names[0]}, ${names[1]} and ${
+      names.length - 2
+    } others like this`;
   }
   return output;
-}
+};
 ```
 
 </details>
@@ -386,7 +392,7 @@ Write a function that accepts an array of 10 integers (between 0 and 9), and ret
 ```js
 const createPhoneNumber = numbers => {
   // Your solution
-}
+};
 
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // '(123) 456-7890'
 console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])); // '(111) 111-1111'
@@ -399,10 +405,10 @@ console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // '(123) 456-78
 const createPhoneNumber = numbers => {
   // Using RegEx
   return numbers.join('').replace(/(\d{3})(\d{3})(\d+)/, '($1) $2-$3');
-  
+
   // Using reduce()
   // return numbers.reduce((acc, cur) => acc.replace('x', cur), '(xxx) xxx-xxxx');
-}
+};
 ```
 
 </details>
@@ -418,7 +424,7 @@ Given an integer, your task is to square every digit of it and concatenate them 
 ```js
 const squareDigits = num => {
   // Your solution
-}
+};
 
 console.log(squareDigits(2112)); // 4114
 console.log(squareDigits(3212)); // 9414
@@ -429,8 +435,14 @@ console.log(squareDigits(9159)); // 8112581
 
 ```js
 const squareDigits = num => {
-  return Number(num.toString().split('').map(ele => ele * ele).join(''));
-}
+  return Number(
+    num
+      .toString()
+      .split('')
+      .map(ele => ele * ele)
+      .join('')
+  );
+};
 ```
 
 </details>
@@ -448,12 +460,12 @@ const isSquare = n => {
   // Your solution
 };
 
-console.log(isSquare(0));   // true
-console.log(isSquare(4));   // true
-console.log(isSquare(25));  // true
-console.log(isSquare(3));   // false
-console.log(isSquare(93));  // false
-console.log(isSquare(-1));  // false
+console.log(isSquare(0)); // true
+console.log(isSquare(4)); // true
+console.log(isSquare(25)); // true
+console.log(isSquare(3)); // false
+console.log(isSquare(93)); // false
+console.log(isSquare(-1)); // false
 ```
 
 <details><summary>Solution</summary>
@@ -477,12 +489,12 @@ Given a string of space-separated numbers, write a function that returns the hig
 ```js
 const highAndLow = numbers => {
   // Your solution
-}
+};
 
-console.log(highAndLow('1 2 3 4 5'));   // '5 1'
-console.log(highAndLow('1 2 -3 4 5'));  // '5 -3'
-console.log(highAndLow('1 9 3 4 -5'));  // '9 -5'
-console.log(highAndLow('0 -214 542'));  // '542 -214'
+console.log(highAndLow('1 2 3 4 5')); // '5 1'
+console.log(highAndLow('1 2 -3 4 5')); // '5 -3'
+console.log(highAndLow('1 9 3 4 -5')); // '9 -5'
+console.log(highAndLow('0 -214 542')); // '542 -214'
 ```
 
 <details><summary>Solution</summary>
@@ -491,7 +503,7 @@ console.log(highAndLow('0 -214 542'));  // '542 -214'
 const highAndLow = numbers => {
   const arr = numbers.split(' ');
   return `${Math.max(...arr)} ${Math.min(...arr)}`;
-}
+};
 ```
 
 </details>
@@ -507,7 +519,7 @@ Write a function that takes any non-negative integer as an argument and returns 
 ```js
 const descendingOrder = n => {
   // Your solution
-}
+};
 
 console.log(descendingOrder(0)); // 0
 console.log(descendingOrder(1)); // 1
@@ -522,7 +534,7 @@ console.log(descendingOrder(123456789)); // 987654321
 ```js
 const descendingOrder = n => {
   return parseInt(n.toString().split('').sort().join(''));
-}
+};
 ```
 
 </details>
@@ -538,19 +550,22 @@ Given a string which includes only letters, write a function that produces the o
 ```js
 const accum = str => {
   // Your solution
-}
+};
 
-console.log(accum('abcd'));     // 'A-Bb-Ccc-Dddd'
-console.log(accum('cwAt'));     // 'C-Ww-Aaa-Tttt'
-console.log(accum('RqaEzty'));  // 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
+console.log(accum('abcd')); // 'A-Bb-Ccc-Dddd'
+console.log(accum('cwAt')); // 'C-Ww-Aaa-Tttt'
+console.log(accum('RqaEzty')); // 'R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy'
 ```
 
 <details><summary>Solution</summary>
 
 ```js
 const accum = str => {
-  return str.split('').map((ele, index) => ele.toUpperCase() + ele.toLowerCase().repeat(index)).join('-');
-}
+  return str
+    .split('')
+    .map((ele, index) => ele.toUpperCase() + ele.toLowerCase().repeat(index))
+    .join('-');
+};
 ```
 
 </details>
@@ -566,7 +581,7 @@ Write a function that takes in a string of one or more words, and returns the sa
 ```js
 const spinWords = str => {
   // Your solution
-}
+};
 
 console.log(spinWords('This is a test')); // 'This is a test'
 console.log(spinWords('Hey fellow warriors')); // 'Hey wollef sroirraw'
@@ -577,8 +592,11 @@ console.log(spinWords('This is another test')); // 'This is rehtona test'
 
 ```js
 const spinWords = str => {
-  return str.split(' ').map(word => word.length < 5 ? word : word.split('').reverse().join('')).join(' ');
-}
+  return str
+    .split(' ')
+    .map(word => (word.length < 5 ? word : word.split('').reverse().join('')))
+    .join(' ');
+};
 ```
 
 </details>
@@ -594,11 +612,11 @@ Given a non-empty string of words, return the length of the shortest word(s).
 ```js
 const findShort = str => {
   // Your solution
-}
+};
 
-console.log(findShort("Test where final word shortest see")); // 3
-console.log(findShort("Lets all go on holiday somewhere very cold")); // 2
-console.log(findShort("i want to travel the world writing code one day")); // 1
+console.log(findShort('Test where final word shortest see')); // 3
+console.log(findShort('Lets all go on holiday somewhere very cold')); // 2
+console.log(findShort('i want to travel the world writing code one day')); // 1
 ```
 
 <details><summary>Solution</summary>
@@ -606,7 +624,7 @@ console.log(findShort("i want to travel the world writing code one day")); // 1
 ```js
 const findShort = str => {
   return Math.min(...str.split(' ').map(word => word.length));
-}
+};
 ```
 
 </details>
@@ -651,14 +669,14 @@ Check to see if a string has the same amount of 'x's and 'o's. The method must r
 ```js
 const XO = str => {
   // Your solution
-}
+};
 
 console.log(XO('xo')); // true
 console.log(XO('Oo')); // false
 console.log(XO('xxOo')); // true
 console.log(XO('xxxm')); // false
 console.log(XO('ooom')); // false
-console.log(XO("ty")); // true (when no 'x' and 'o' is present should return true)
+console.log(XO('ty')); // true (when no 'x' and 'o' is present should return true)
 ```
 
 <details><summary>Solution</summary>
@@ -674,7 +692,7 @@ const XO = str => {
     }
   }
   return !result;
-}
+};
 ```
 
 </details>
@@ -755,10 +773,10 @@ const arrayDiff = (a, b) => {
   // Your solution
 };
 
-console.log(arrayDiff([1,8,2], []));    // [1, 8, 2]
-console.log(arrayDiff([1,2,3], [1,2])); // [3]
-console.log(arrayDiff([3,4], [3]));     // [4]
-console.log(arrayDiff([], [4,5]));      // []
+console.log(arrayDiff([1, 8, 2], [])); // [1, 8, 2]
+console.log(arrayDiff([1, 2, 3], [1, 2])); // [3]
+console.log(arrayDiff([3, 4], [3])); // [4]
+console.log(arrayDiff([], [4, 5])); // []
 ```
 
 <details><summary>Solution</summary>
@@ -792,7 +810,9 @@ console.log(str.capitalize()); // 'How Can Mirrors Be Real If Our Eyes Aren't Re
 
 ```js
 String.prototype.capitalize = function () {
-  return this.split(' ').map(ele => ele[0].toUpperCase() + ele.slice(1)).join(' ');
+  return this.split(' ')
+    .map(ele => ele[0].toUpperCase() + ele.slice(1))
+    .join(' ');
 };
 ```
 
@@ -809,11 +829,11 @@ DNA is a chemical found in the nucleus of cells and carries the "instructions" f
 ```js
 const DNAStrand = dna => {
   // Your solution
-}
+};
 
-console.log(DNAStrand('AAAA'));   // 'TTTT'
-console.log(DNAStrand('ATTGC'));  // 'TAACG'
-console.log(DNAStrand('GTAT'));   // 'CATA'
+console.log(DNAStrand('AAAA')); // 'TTTT'
+console.log(DNAStrand('ATTGC')); // 'TAACG'
+console.log(DNAStrand('GTAT')); // 'CATA'
 ```
 
 <details><summary>Solution</summary>
@@ -821,13 +841,13 @@ console.log(DNAStrand('GTAT'));   // 'CATA'
 ```js
 const DNAStrand = dna => {
   const MAP = {
-    'A': 'T',
-    'T': 'A',
-    'G': 'C',
-    'C': 'G',
-  }
+    A: 'T',
+    T: 'A',
+    G: 'C',
+    C: 'G',
+  };
   return [...dna].map(ele => MAP[ele]).join('');
-}
+};
 ```
 
 </details>
@@ -843,7 +863,7 @@ An isogram is a word that has no repeating letters, consecutive or non-consecuti
 ```js
 const isIsogram = str => {
   // Your solution
-}
+};
 
 console.log(isIsogram('Dermatoglyphics')); // true
 console.log(isIsogram('isIsogram')); // false
@@ -858,7 +878,7 @@ console.log(isIsogram('')); // true
 ```js
 const isIsogram = str => {
   return str.length === new Set(str.toLowerCase()).size;
-}
+};
 ```
 
 </details>
@@ -869,14 +889,14 @@ const isIsogram = str => {
 
 ## 29. FizzBuzz
 
-Write a program that prints the numbers from 1 to 100. But for multiples of 
-`3` prints "Fizz" instead of the number and for the multiples of `5` prints 
+Write a program that prints the numbers from 1 to 100. But for multiples of
+`3` prints "Fizz" instead of the number and for the multiples of `5` prints
 "Buzz". For numbers which are multiples of both `3` and `5` prints "FizzBuzz".
 
 ```js
 const fizzBuzz = () => {
   // Your solution
-}
+};
 
 fizzBuzz(); // 1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, ...
 ```
@@ -892,7 +912,7 @@ const fizzBuzz = () => {
     if (i % 5 === 0) result += 'Buzz';
     console.log(result || i);
   }
-}
+};
 ```
 
 </details>
@@ -908,14 +928,14 @@ Write a function that will return the count of distinct case-insensitive alphanu
 ```js
 const duplicateCount = text => {
   // Your solution
-}
+};
 
-console.log(duplicateCount("")); // 0
-console.log(duplicateCount("abcde")); // 0
-console.log(duplicateCount("aabbcde")); // 2
-console.log(duplicateCount("aabBcde")); // 2, "should ignore case"
-console.log(duplicateCount("Indivisibility")); // 1
-console.log(duplicateCount("Indivisibilities")); // 2, "characters may not be adjacent"
+console.log(duplicateCount('')); // 0
+console.log(duplicateCount('abcde')); // 0
+console.log(duplicateCount('aabbcde')); // 2
+console.log(duplicateCount('aabBcde')); // 2, "should ignore case"
+console.log(duplicateCount('Indivisibility')); // 1
+console.log(duplicateCount('Indivisibilities')); // 2, "characters may not be adjacent"
 ```
 
 <details><summary>Solution</summary>
@@ -927,13 +947,13 @@ const duplicateCount = text => {
   for (let letter of text) {
     freq[letter] = (freq[letter] || 0) + 1;
   }
-  
+
   let result = 0;
   for (let letter in freq) {
     if (freq[letter] > 1) result++;
   }
   return result;
-}
+};
 ```
 
 </details>
@@ -949,12 +969,12 @@ Write a function that converts a string to a new string where each character in 
 ```js
 const duplicateEncode = word => {
   // Your solution
-}
+};
 
-console.log(duplicateEncode('din'));      // '((('
-console.log(duplicateEncode('(( @'));     // '))(('
-console.log(duplicateEncode('recede'));   // '()()()'
-console.log(duplicateEncode('Success'));  // ')())())'
+console.log(duplicateEncode('din')); // '((('
+console.log(duplicateEncode('(( @')); // '))(('
+console.log(duplicateEncode('recede')); // '()()()'
+console.log(duplicateEncode('Success')); // ')())())'
 ```
 
 <details><summary>Solution</summary>
@@ -965,11 +985,11 @@ const duplicateEncode = word => {
   let result = '';
   for (let char of word) {
     word.indexOf(char) !== word.lastIndexOf(char)
-    ? result += ')'
-    : result += '(';
+      ? (result += ')')
+      : (result += '(');
   }
   return result;
-}
+};
 ```
 
 </details>
@@ -980,17 +1000,17 @@ const duplicateEncode = word => {
 
 ## 32. Reversed Strings
 
-Write a function that reverses the string that is passed to it. For this challenge, you may __NOT__ use the JavaScript built-in `reverse()` method.
+Write a function that reverses the string that is passed to it. For this challenge, you may **NOT** use the JavaScript built-in `reverse()` method.
 
 ```js
 const reverseString = str => {
   // Your solution
-}
+};
 
-console.log(reverseString('hello'));  // 'olleh'
-console.log(reverseString('world'));  // 'dlrow'
-console.log(reverseString(''));       // ''
-console.log(reverseString('h'));      // 'h'
+console.log(reverseString('hello')); // 'olleh'
+console.log(reverseString('world')); // 'dlrow'
+console.log(reverseString('')); // ''
+console.log(reverseString('h')); // 'h'
 ```
 
 <details><summary>Solution</summary>
@@ -1002,7 +1022,7 @@ const reverseString = str => {
     result = char + result;
   }
   return result;
-}
+};
 ```
 
 </details>
@@ -1018,15 +1038,15 @@ Write a function that takes a positive number `num` and returns its multiplicati
 ```js
 const persistence = num => {
   // Your solution
-}
+};
 
-console.log(persistence(999));  // 4
+console.log(persistence(999)); // 4
 // because 9*9*9=729, 7*2*9=126, 1*2*6=12, and finally 1*2=2
 
-console.log(persistence(93));   // 3
+console.log(persistence(93)); // 3
 // because 9*3=27, 2*7=14, 1*4=4 and 4 has only one digit
 
-console.log(persistence(5));    // 0
+console.log(persistence(5)); // 0
 // because 5 is already a single-digit number
 ```
 
@@ -1044,7 +1064,7 @@ const persistence = num => {
 
   // Using recursion
   return 1 + persistence(product * num);
-}
+};
 ```
 
 </details>
@@ -1055,7 +1075,7 @@ const persistence = num => {
 
 ## 34. Fibonacci Number
 
-Fibonacci number (Fibonacci sequence), named after mathematician Fibonacci, is a sequence of numbers that looks like this: `0, 1, 1, 2, 3, 5, 8, 13,...`. You get first two starting numbers, 0 and 1, and the next number in the sequence is always the sum of the previous two numbers. 
+Fibonacci number (Fibonacci sequence), named after mathematician Fibonacci, is a sequence of numbers that looks like this: `0, 1, 1, 2, 3, 5, 8, 13,...`. You get first two starting numbers, 0 and 1, and the next number in the sequence is always the sum of the previous two numbers.
 
 Write a function `fib()` that takes one parameter `steps`, and returns a number from the Fibonacci sequence, based on the parameter steps, which determines the position in Fibonacci number. For example `fib(0)` returns `0`, `fib(4)` returns `3`, and `fib(15)` returns `610`.
 
@@ -1093,7 +1113,7 @@ Given a string, write a function that replaces every letter with its position in
 ```js
 const alphabetPosition = text => {
   // Your solution
-}
+};
 
 console.log(alphabetPosition('The narwhal bacons at midnight.'));
 // '20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20'
@@ -1112,7 +1132,7 @@ const alphabetPosition = text => {
     .match(/[a-z]/g)
     .map(letter => letter.charCodeAt() - startingIndex)
     .join(' ');
-}
+};
 ```
 
 </details>
@@ -1140,7 +1160,7 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]
 const twoSum = (nums, target) => {
   const map = new Map();
 
-  for(let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
     const otherIndex = map.get(target - nums[i]);
     if (typeof otherIndex !== 'undefined') {
       return [otherIndex, i];
@@ -1165,9 +1185,9 @@ const uniqueInOrder = iterable => {
   // Your solution
 };
 
-console.log(uniqueInOrder([1, 2, 2, 3, 3]));    // [1, 2, 3]
-console.log(uniqueInOrder('ABBCcAD'));          // ['A', 'B', 'C', 'c', 'A', 'D']
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));  // ['A', 'B', 'C', 'D', 'A', 'B']
+console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1, 2, 3]
+console.log(uniqueInOrder('ABBCcAD')); // ['A', 'B', 'C', 'c', 'A', 'D']
+console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
 ```
 
 <details><summary>Solution</summary>
@@ -1250,28 +1270,28 @@ const maxProfit = prices => {
 
 ## 39. Dubstep
 
-Mike works as a DJ in the best London nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them. Let's assume that a song consists of some number of words (that don't contain `WUB`). To make the dubstep remix of this song, Mike inserts a certain number of words `WUB` before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighbouring words), and then the boy glues together all the words, including `WUB`, in one string and plays the song at the club.
+Mike works as a DJ in the best London nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them. Let's assume that a song consists of some number of words (that don't contain `WUB`). To make the dubstep remix of this song, Mike inserts a certain number of words `WUB` before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighboring words), and then the boy glues together all the words, including `WUB`, in one string and plays the song at the club.
 
 For example, a song with words "I AM X" can transform into a dubstep remix as `WUBWUBIWUBAMWUBWUBX` and cannot transform into `WUBWUBIAMWUBX`.
 
 Recently, Johnny has heard Mike's new dubstep track, but since he isn't into modern music, he decided to find out what was the initial song that Mike remixed. Help Johnny restore the original song.
 
-*Input*: The input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters
+_Input_: The input consists of a single non-empty string, consisting only of uppercase English letters, the string's length doesn't exceed 200 characters
 
-*Output*: Return the words of the initial song that Mike used to make a dubsteb remix. Separate the words with a space.
+_Output_: Return the words of the initial song that Mike used to make a dubsteb remix. Separate the words with a space.
 
 ```js
 const songDecoder = song => {
   // Your solution
-}
+};
 
-console.log(songDecoder("AWUBBWUBC"));
+console.log(songDecoder('AWUBBWUBC'));
 // 'A B C' (WUB should be replaced by 1 space)
-console.log(songDecoder("AWUBWUBWUBBWUBWUBWUBC"));
+console.log(songDecoder('AWUBWUBWUBBWUBWUBWUBC'));
 // 'A B C' (Multiples WUBs should be replaced by only 1 space)
-console.log(songDecoder("WUBAWUBBWUBCWUB"));
+console.log(songDecoder('WUBAWUBBWUBCWUB'));
 // 'A B C' (Any starting or trailing WUBs should be removed)
-console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
+console.log(songDecoder('WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB'));
 // 'WE ARE THE CHAMPIONS MY FRIEND'
 ```
 
@@ -1280,7 +1300,7 @@ console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
 ```js
 const songDecoder = song => {
   return song.replace(/(WUB)+/g, ' ').trim();
-}
+};
 ```
 
 </details>
@@ -1374,7 +1394,7 @@ Given a sorted array `nums`, write a function that removes the duplicates in-pla
 
 ```js
 const removeDuplicates = nums => {
-   // Your solution
+  // Your solution
 };
 
 console.log(removeDuplicates([1, 1, 2])); // 2 (because [1, 2] has length 2)
@@ -1395,7 +1415,7 @@ const removeDuplicates = nums => {
       nums[currentIndex] = nums[i];
     }
   }
-  
+
   nums.length = currentIndex + 1;
   return nums.length;
 };
@@ -1486,28 +1506,47 @@ You are given an `m x n` integer grid `accounts`, where `accounts[i][j]` is the 
 ```
 Input: accounts = [[1,5],[7,3],[3,5]]
 Output: 10
-Explanation: 
+Explanation:
 1st customer has wealth = 6
-2nd customer has wealth = 10 
+2nd customer has wealth = 10
 3rd customer has wealth = 8
 The 2nd customer is the richest with a wealth of 10.
 ```
 
 ```js
 const maximumWealth = accounts => {
-   // Your solution
+  // Your solution
 };
 
-console.log(maximumWealth([[2,8,7],[7,1,3],[1,9,5]]));  // 17
-console.log(maximumWealth([[1,5],[7,3],[3,5]]));        // 10
-console.log(maximumWealth([[1,2,3],[3,2,1]]));          // 6
+console.log(
+  maximumWealth([
+    [2, 8, 7],
+    [7, 1, 3],
+    [1, 9, 5],
+  ])
+); // 17
+console.log(
+  maximumWealth([
+    [1, 5],
+    [7, 3],
+    [3, 5],
+  ])
+); // 10
+console.log(
+  maximumWealth([
+    [1, 2, 3],
+    [3, 2, 1],
+  ])
+); // 6
 ```
 
 <details><summary>Solution</summary>
 
 ```js
 const maximumWealth = accounts => {
-  return Math.max(...accounts.map(customer => customer.reduce((a, b) => a + b)));
+  return Math.max(
+    ...accounts.map(customer => customer.reduce((a, b) => a + b))
+  );
 };
 ```
 
@@ -1611,7 +1650,7 @@ Write a function that counts the frequency of all the characters in a given stri
 ```js
 const count = string => {
   // Your solution
-}
+};
 
 console.log(count('')); // {}
 console.log(count('aba')); // { a: 2, b: 1 }
@@ -1623,10 +1662,10 @@ console.log(count('aba')); // { a: 2, b: 1 }
 const count = string => {
   const result = {};
   for (let char of string) {
-     result[char] = (result[char] || 0) + 1;
+    result[char] = (result[char] || 0) + 1;
   }
   return result;
-}
+};
 ```
 
 </details>
@@ -1641,8 +1680,8 @@ Complete the solution so that the function will break up camel casing, using a s
 
 ```js
 const solution = str => {
-   // Your solution
-}
+  // Your solution
+};
 
 console.log(solution('camelCasingHere')); // camel Casing Here
 console.log(solution('No Camels here')); // No Camels here
@@ -1654,8 +1693,8 @@ console.log(solution('')); // ''
 
 ```js
 const solution = str => {
-   return str.replace(/([a-z])([A-Z])/g, '$1 $2');
-}
+  return str.replace(/([a-z])([A-Z])/g, '$1 $2');
+};
 ```
 
 </details>
@@ -1666,7 +1705,7 @@ const solution = str => {
 
 ## 50. Check if Word Equals Summation of Two Words
 
-Let's assume that the numeric value of a letter is its position in the alphabet starting from `0` (i.e. `a -> 0, b -> 1, c -> 2`, etc.). Similarly, the numerical value of a string `str` consisting of some lowercase English letters is the concatenation (not sum!) of the numeric values of each letter in `str`, which is then converted into an integer. For example, if `str = 'acb'`, we concatenate each letter's numeric value, resulting in `021` which is then converted to integer `21`. 
+Let's assume that the numeric value of a letter is its position in the alphabet starting from `0` (i.e. `a -> 0, b -> 1, c -> 2`, etc.). Similarly, the numerical value of a string `str` consisting of some lowercase English letters is the concatenation (not sum!) of the numeric values of each letter in `str`, which is then converted into an integer. For example, if `str = 'acb'`, we concatenate each letter's numeric value, resulting in `021` which is then converted to integer `21`.
 
 You are given three strings `firstWord`, `secondWord`, and `targetWord`, each consisting of lowercase English letters `a` through `j` inclusive. Write a function that returns true if the sum of the numerical values of `firstWord` and `secondWord` equals the numerical value of `targetWord`.
 
@@ -1706,10 +1745,13 @@ const getNumericValue = str => {
   }
 
   return parseInt(arr.join(''));
-} 
+};
 
 const isSumEqual = (firstWord, secondWord, targetWord) => {
-  return getNumericValue(firstWord) + getNumericValue(secondWord) === getNumericValue(targetWord);
+  return (
+    getNumericValue(firstWord) + getNumericValue(secondWord) ===
+    getNumericValue(targetWord)
+  );
 };
 ```
 
@@ -1726,7 +1768,7 @@ Write a function that given an input URL, returns its domain name.
 ```js
 const domainName = url => {
   // Your solution
-}
+};
 
 console.log(domainName('www.google.ca')); // google
 console.log(domainName('http://google.com')); // google
@@ -1740,7 +1782,7 @@ console.log(domainName('https://www.google.com')); // google
 ```js
 const domainName = url => {
   return url.replace(/(www\.|.*\/\/|\..+)/g, '');
-}
+};
 
 // Alternative solution with no regex
 // const domainName = url => url.replace('http://', '').replace('https://', '').replace('www.', '').split('.')[0];
@@ -1798,16 +1840,16 @@ Create a function that takes a positive integer less than `4,000` as its input a
 Table of individual decimal places for your reference:
 
 ```markdown
-  Thousands Hundreds  Tens  Units
-1 M         C         X     I
-2 MM        CC        XX    II
-3 MMM       CCC       XXX   III
-4           CD        XL    IV
-5           D         L     V
-6           DC        LX    VI
-7           DCC       LXX   VII
-8           DCCC      LXXX  VIII
-9           CM        XC    IX
+Thousands Hundreds Tens Units
+1 M C X I
+2 MM CC XX II
+3 MMM CCC XXX III
+4 CD XL IV
+5 D L V
+6 DC LX VI
+7 DCC LXX VII
+8 DCCC LXXX VIII
+9 CM XC IX
 ```
 
 ```js
@@ -1815,26 +1857,25 @@ const convertToRoman = number => {
   // Your solution
 };
 
-console.log(convertToRoman(4));     // IV
-console.log(convertToRoman(9));     // IX
-console.log(convertToRoman(11));    // XI
-console.log(convertToRoman(19));    // XIX
-console.log(convertToRoman(22));    // XXII
-console.log(convertToRoman(15));    // XV
-console.log(convertToRoman(39));    // XXX + IX = XXXIX
-console.log(convertToRoman(160));   // C + LX = CLX
-console.log(convertToRoman(207));   // CC + VII = CCVII
-console.log(convertToRoman(246));   // CC + XL + VI = CCXLVI
-console.log(convertToRoman(789));   // DCC + LXXX + IX = DCCLXXXIX
-console.log(convertToRoman(1009));  // M + IX = MIX
-console.log(convertToRoman(1066));  // M + LX + VI = MLXVI
-console.log(convertToRoman(1776));  // M + DCC + LXX + VI = MDCCLXXVI
-console.log(convertToRoman(1918));  // M + CM + X + VIII = MCMXVIII
-console.log(convertToRoman(1954));  // M + CM + L + IV = MCMLIV
-console.log(convertToRoman(2014));  // MM + X + IV = MMXIV
-console.log(convertToRoman(2421));  // MM + CD + XX + I = MMCDXXI
-console.log(convertToRoman(3999));  // MMM + CM + XC + IX = MMMCMXCIX
-
+console.log(convertToRoman(4)); // IV
+console.log(convertToRoman(9)); // IX
+console.log(convertToRoman(11)); // XI
+console.log(convertToRoman(19)); // XIX
+console.log(convertToRoman(22)); // XXII
+console.log(convertToRoman(15)); // XV
+console.log(convertToRoman(39)); // XXX + IX = XXXIX
+console.log(convertToRoman(160)); // C + LX = CLX
+console.log(convertToRoman(207)); // CC + VII = CCVII
+console.log(convertToRoman(246)); // CC + XL + VI = CCXLVI
+console.log(convertToRoman(789)); // DCC + LXXX + IX = DCCLXXXIX
+console.log(convertToRoman(1009)); // M + IX = MIX
+console.log(convertToRoman(1066)); // M + LX + VI = MLXVI
+console.log(convertToRoman(1776)); // M + DCC + LXX + VI = MDCCLXXVI
+console.log(convertToRoman(1918)); // M + CM + X + VIII = MCMXVIII
+console.log(convertToRoman(1954)); // M + CM + L + IV = MCMLIV
+console.log(convertToRoman(2014)); // MM + X + IV = MMXIV
+console.log(convertToRoman(2421)); // MM + CD + XX + I = MMCDXXI
+console.log(convertToRoman(3999)); // MMM + CM + XC + IX = MMMCMXCIX
 ```
 
 <details><summary>Solution</summary>
@@ -1842,7 +1883,21 @@ console.log(convertToRoman(3999));  // MMM + CM + XC + IX = MMMCMXCIX
 ```js
 const convertToRoman = number => {
   const decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-  const romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+  const romans = [
+    'M',
+    'CM',
+    'D',
+    'CD',
+    'C',
+    'XC',
+    'L',
+    'XL',
+    'X',
+    'IX',
+    'V',
+    'IV',
+    'I',
+  ];
   let result = '';
 
   decimals.map((value, index) => {
@@ -1871,18 +1926,20 @@ const scramble = (str1, str2) => {
   // Your solution
 };
 
-console.log(scramble('scriptjava', 'javascript'));    // true
+console.log(scramble('scriptjava', 'javascript')); // true
 console.log(scramble('scriptingjava', 'javascript')); // true
-console.log(scramble('scriptsjava', 'javascripts'));  // true
-console.log(scramble('jscripts', 'javascript'));      // false
-console.log(scramble('javscripts', 'javascript'));    // false
+console.log(scramble('scriptsjava', 'javascripts')); // true
+console.log(scramble('jscripts', 'javascript')); // false
+console.log(scramble('javscripts', 'javascript')); // false
 ```
 
 <details><summary>Solution</summary>
 
 ```js
 const scramble = (str1, str2) => {
-  return [...str2].every(letter => str2.split(letter).length <= str1.split(letter).length);
+  return [...str2].every(
+    letter => str2.split(letter).length <= str1.split(letter).length
+  );
 };
 ```
 
@@ -1892,7 +1949,7 @@ const scramble = (str1, str2) => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## 55. Wave, wAve, waVe, wavE 
+## 55. Wave, wAve, waVe, wavE
 
 Write a function that turns a given string into a wave! You will be passed a string and you must return that string in an array where each letter takes turns to become uppercase. The input string will always be lowercase but may be empty. If you encounter a whitespace then pass over it.
 
@@ -1935,9 +1992,8 @@ const getConcatenation = nums => {
   // Your solution
 };
 
-console.log(getConcatenation([1, 2, 3]));     // [1, 2, 3, 1, 2, 3]
-console.log(getConcatenation([4, 3, 2, 1]));  // [4, 3, 2, 1, 4, 3, 2, 1]
-
+console.log(getConcatenation([1, 2, 3])); // [1, 2, 3, 1, 2, 3]
+console.log(getConcatenation([4, 3, 2, 1])); // [4, 3, 2, 1, 4, 3, 2, 1]
 ```
 
 <details><summary>Solution</summary>
