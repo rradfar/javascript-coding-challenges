@@ -59,6 +59,7 @@ console.log(even_or_odd(-3)); // 'Odd'
 
 ```js
 const even_or_odd = number => {
+  // Let's use a ternary operator
   return number % 2 === 0 ? 'Even' : 'Odd';
 };
 ```
@@ -71,7 +72,7 @@ const even_or_odd = number => {
 
 ## 3. Clock
 
-The clock shows h hours (0 <= h <= 23), m minutes (0 <= m <= 59) and s seconds (0 <= s <= 59) after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
+The clock shows h hours (0 <= h <= 23), m minutes (0 <= m <= 59) and s seconds (0 <= s <= 59) after midnight. Your task is to write a function which returns the time since midnight in milliseconds. There are 1,000 milliseconds in a second.
 
 ```js
 const past = (h, m, s) => {
@@ -116,6 +117,7 @@ console.log(greet('Sara')); // "Hello, Sara how are you doing today?"
 
 ```js
 const greet = name => {
+  // Let's use a template literal
   return `Hello, ${name} how are you doing today?`;
 };
 ```
@@ -158,7 +160,7 @@ const century = year => {
 
 ## 6. Keep Hydrated!
 
-Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+Nathan loves cycling. Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling. Given the time in hours, you need to return the number of litres of water that Nathan will drink, rounded to the smallest value.
 
 ```js
 const litres = time => {
@@ -178,7 +180,7 @@ console.log(litres(1787)); // 893
 
 ```js
 const litres = time => {
-  return Math.floor(time / 2);
+  return Math.floor(time * 0.5);
 };
 ```
 
@@ -241,6 +243,13 @@ const getCount = str => {
     if ('aeiou'.includes(char)) vowelsCount++;
   }
   return vowelsCount;
+};
+
+// An alternative solution could be to convert the string to an array (using the spread syntax)
+// and filtering that array by vowels
+const getCount = str => {
+  const arr = [...str];
+  return arr.filter(ele => ['a', 'e', 'i', 'o', 'u'].includes(ele)).length;
 };
 ```
 
