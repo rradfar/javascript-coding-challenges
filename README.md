@@ -275,6 +275,7 @@ console.log(disemvowel('This website is for losers LOL!')); // 'Ths wbst s fr ls
 
 ```js
 const disemvowel = str => {
+  // Let's use regular expressions (regex)
   return str.replace(/[aeiou]/gi, '');
 };
 ```
@@ -2053,6 +2054,46 @@ console.log(getNames(users)); // ['Alice', 'Bob', 'Claire']
 
 ```js
 const getNames = users => users.map(user => user.name);
+```
+
+</details>
+
+---
+
+**[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
+
+## 58. Object Keys from snake_case to camelCase
+
+Write a function that converts all the keys in an object from snake case to camel case.
+
+```js
+const toCamel = obj => {
+  // Your solution
+};
+
+console.log(
+  toCamel({
+    first_name: 'John',
+    last_name: 'Rambo',
+    favorite_movie: 'First Blood',
+  })
+); // {'firstName': 'John', 'lastName': 'Rambo', 'favoriteMovie': 'First Blood'}
+```
+
+<details><summary>Solution</summary>
+
+```js
+const toCamel = obj => {
+  const result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    // Let's use regex capture groups
+    const camelKey = key.replace(/(_[a-z])/gi, $1 =>
+      $1.replace('_', '').toUpperCase()
+    );
+    result[camelKey] = value;
+  }
+  return result;
+};
 ```
 
 </details>
