@@ -180,7 +180,7 @@ console.log(litres(1787)); // 893
 
 ```js
 const litres = time => {
-  return Math.floor(time * 0.5);
+  return Math.floor(time / 0.5);
 };
 ```
 
