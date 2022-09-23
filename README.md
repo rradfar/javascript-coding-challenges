@@ -336,10 +336,10 @@ console.log(getMiddle('A')); // 'A'
 
 ```js
 const getMiddle = str => {
-  const midIndex = str.length / 2;
-  return str.length % 2
-    ? str[Math.floor(midIndex)]
-    : str[midIndex - 1] + str[midIndex];
+  const len = str.length;
+  const mid = len / 2;
+  // For an odd length, len % 2 equals 1 which is truthy
+  return len % 2 ? str[Math.floor(mid)] : str[mid - 1] + str[mid];
 };
 ```
 
@@ -371,20 +371,20 @@ console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])); // 'Alex, Jacob and 2 othe
 
 ```js
 const likes = names => {
+  const len = names.length;
   let output;
-  if (names.length === 0) {
+  if (len === 0) {
     output = 'no one likes this';
-  } else if (names.length === 1) {
+  } else if (len === 1) {
     output = `${names[0]} likes this`;
-  } else if (names.length === 2) {
+  } else if (len === 2) {
     output = `${names[0]} and ${names[1]} like this`;
-  } else if (names.length === 3) {
+  } else if (len === 3) {
     output = `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else {
-    output = `${names[0]}, ${names[1]} and ${
-      names.length - 2
-    } others like this`;
+    output = `${names[0]}, ${names[1]} and ${len - 2} others like this`;
   }
+
   return output;
 };
 ```
@@ -413,10 +413,14 @@ console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // '(123) 456-78
 
 ```js
 const createPhoneNumber = numbers => {
-  // Using RegEx
-  return numbers.join('').replace(/(\d{3})(\d{3})(\d+)/, '($1) $2-$3');
+  // Using substrings
+  const str = numbers.join('');
+  return `(${str.substring(0, 3)}) ${str.substring(3, 6)}-${str.substring(6)}`;
 
-  // Using reduce()
+  // Alternative solution using RegEx
+  // return numbers.join('').replace(/(\d{3})(\d{3})(\d+)/, '($1) $2-$3');
+
+  // Alternative solution using reduce()
   // return numbers.reduce((acc, cur) => acc.replace('x', cur), '(xxx) xxx-xxxx');
 };
 ```
@@ -461,7 +465,7 @@ const squareDigits = num => {
 
 **[⬆ Back to Top](#javascript-coding-challenges-for-beginners)**
 
-## 15. You're a square!
+## 15. You're a Square!
 
 Write a function that given an integer, checks to see if it is a square number. A square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
 
