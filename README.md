@@ -1235,7 +1235,7 @@ You are given an array `prices` where `prices[i]` is the price of a given stock 
 
 Example 1:
 
-```
+```shell
 Input: prices = [7,1,5,3,6,4]
 Output: 5
 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
@@ -1244,7 +1244,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 Example 2:
 
-```
+```shell
 Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
@@ -1446,7 +1446,7 @@ const removeDuplicates = nums => {
 Given an array `candies` where `candies[i]` represents the number of candies that the `i`th kid has, and an integer `extraCandies`, write a function that for each kid checks if he/she would have the greatest number of candies in the group if they were given `extraCandies`. Note that multiple kids can have the greatest number of candies.
 For example,
 
-```
+```shell
 Input: candies = [2,3,5,1,3], extraCandies = 3
 Output: [true,true,true,false,true]
 
@@ -1517,7 +1517,7 @@ const rot13 = str => {
 
 You are given an `m x n` integer grid `accounts`, where `accounts[i][j]` is the amount of money the `i`​​​​​​​​​​​th​​​​ customer has in the `j`​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has. A customer's wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth. For example:
 
-```
+```shell
 Input: accounts = [[1,5],[7,3],[3,5]]
 Output: 10
 Explanation:
