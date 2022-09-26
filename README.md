@@ -697,14 +697,16 @@ console.log(XO('ty')); // true (when no 'x' and 'o' is present should return tru
 
 ```js
 const XO = str => {
+  const lowerStr = str.toLowerCase();
   let result = 0;
-  for (let letter of str.toLowerCase()) {
+  for (const letter of lowerStr) {
     if (letter === 'x') {
       result++;
     } else if (letter === 'o') {
       result--;
     }
   }
+
   return !result;
 };
 ```
@@ -735,7 +737,7 @@ console.log(positiveSum([])); // 0
 
 ```js
 const positiveSum = arr => {
-  return arr.filter(ele => ele > 0).reduce((a, b) => a + b, 0);
+  return arr.reduce((acc, cur) => (cur > 0 ? acc + cur : acc), 0);
 };
 ```
 
@@ -766,9 +768,9 @@ console.log(findOutlier([4, 0, 100, 4, 11, 2602, 36])); // 11
 
 ```js
 const findOutlier = arr => {
-  const even = arr.filter(ele => ele % 2 === 0);
-  const odd = arr.filter(ele => ele % 2 !== 0);
-  return even.length === 1 ? even[0] : odd[0];
+  const evenArray = arr.filter(ele => ele % 2 === 0);
+  const oddArray = arr.filter(ele => ele % 2 !== 0);
+  return evenArray.length === 1 ? evenArray[0] : oddArray[0];
 };
 ```
 
