@@ -856,13 +856,13 @@ console.log(DNAStrand('GTAT')); // 'CATA'
 
 ```js
 const DNAStrand = dna => {
-  const MAP = {
+  const dnaMap = {
     A: 'T',
     T: 'A',
     G: 'C',
     C: 'G',
   };
-  return [...dna].map(ele => MAP[ele]).join('');
+  return [...dna].map(ele => dnaMap[ele]).join('');
 };
 ```
 
@@ -893,7 +893,13 @@ console.log(isIsogram('')); // true
 
 ```js
 const isIsogram = str => {
-  return str.length === new Set(str.toLowerCase()).size;
+  const lowerStr = str.toLowerCase();
+
+  // Using Set
+  return str.length === new Set(lowerStr).size;
+
+  // Alternative solution using every()
+  // return [...lowerStr].every((ele, index) => lowerStr.indexOf(ele) === index);
 };
 ```
 
@@ -921,12 +927,12 @@ fizzBuzz(); // 1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, ...
 
 ```js
 const fizzBuzz = () => {
-  let result;
-  for (let i = 1; i <= 100; i++) {
-    result = '';
-    if (i % 3 === 0) result += 'Fizz';
-    if (i % 5 === 0) result += 'Buzz';
-    console.log(result || i);
+  let output;
+  for (let num = 1; num <= 100; num++) {
+    output = '';
+    if (num % 3 === 0) output += 'Fizz';
+    if (num % 5 === 0) output += 'Buzz';
+    console.log(output || num);
   }
 };
 ```
@@ -948,27 +954,26 @@ const duplicateCount = text => {
 
 console.log(duplicateCount('')); // 0
 console.log(duplicateCount('abcde')); // 0
+console.log(duplicateCount('abA11')); // 2
 console.log(duplicateCount('aabbcde')); // 2
-console.log(duplicateCount('aabBcde')); // 2, "should ignore case"
+console.log(duplicateCount('aabBcde')); // 2
 console.log(duplicateCount('Indivisibility')); // 1
-console.log(duplicateCount('Indivisibilities')); // 2, "characters may not be adjacent"
+console.log(duplicateCount('Indivisibilities')); // 2
 ```
 
 <details><summary>Solution</summary>
 
 ```js
 const duplicateCount = text => {
-  text = text.toLowerCase();
-  const freq = {};
-  for (let letter of text) {
-    freq[letter] = (freq[letter] || 0) + 1;
-  }
+  const lowercaseText = text.toLowerCase();
+  let frequency = {};
+  let count = 0;
 
-  let result = 0;
-  for (let letter in freq) {
-    if (freq[letter] > 1) result++;
+  for (const letter of lowercaseText) {
+    frequency[letter] = (frequency[letter] || 0) + 1;
+    if (frequency[letter] === 2) count++;
   }
-  return result;
+  return count;
 };
 ```
 
