@@ -1002,10 +1002,10 @@ console.log(duplicateEncode('Success')); // ')())())'
 
 ```js
 const duplicateEncode = word => {
-  word = word.toLowerCase();
+  const lowerWord = word.toLowerCase();
   let result = '';
-  for (let char of word) {
-    word.indexOf(char) !== word.lastIndexOf(char)
+  for (const char of lowerWord) {
+    lowerWord.indexOf(char) !== lowerWord.lastIndexOf(char)
       ? (result += ')')
       : (result += '(');
   }
