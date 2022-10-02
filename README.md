@@ -1224,18 +1224,8 @@ console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
 
 ```js
 const uniqueInOrder = iterable => {
-  const len = iterable.length;
-  let result = [];
-  let lastItem;
-
-  for (let i = 0; i < len; i++) {
-    if (iterable[i] !== lastItem) {
-      result.push(iterable[i]);
-      lastItem = iterable[i];
-    }
-  }
-
-  return result;
+  const arr = [...iterable];
+  return arr.filter((ele, index) => ele !== arr[index - 1]);
 };
 ```
 
@@ -1330,6 +1320,9 @@ console.log(songDecoder('WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB'));
 ```js
 const songDecoder = song => {
   return song.replace(/(WUB)+/g, ' ').trim();
+
+  // Alternative solution
+  // return song.split('WUB').filter(Boolean).join(' ');
 };
 ```
 
