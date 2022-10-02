@@ -1179,15 +1179,24 @@ console.log(twoSum([3, 2, 4], 6)); // [1, 2]
 
 ```js
 const twoSum = (nums, target) => {
-  const map = new Map();
-
-  for (let i = 0; i < nums.length; i++) {
-    const otherIndex = map.get(target - nums[i]);
-    if (typeof otherIndex !== 'undefined') {
-      return [otherIndex, i];
+  const len = nums.length;
+  for (let i = 0; i < len; i++) {
+    const j = nums.lastIndexOf(target - nums[i]);
+    if (j > i) {
+      return [i, j];
     }
-    map.set(nums[i], i);
   }
+
+  // Alternative solution using Map
+  // const map = new Map();
+
+  // for (let i = 0; i < nums.length; i++) {
+  //   const otherIndex = map.get(target - nums[i]);
+  //   if (typeof otherIndex !== 'undefined') {
+  //     return [otherIndex, i];
+  //   }
+  //   map.set(nums[i], i);
+  // }
 };
 ```
 
