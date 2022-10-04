@@ -1399,7 +1399,7 @@ console.log(reverse(1534236469)); // 0
 const reverse = x => {
   const MAX = Math.pow(2, 31) - 1;
   const MIN = -1 * Math.pow(2, 31);
-  let arr = Math.abs(x).toString().split('');
+  const arr = Math.abs(x).toString().split('');
   const reversed = Math.sign(x) * Number(arr.reverse().join(''));
   return reversed < MIN || reversed > MAX ? 0 : reversed;
 };
@@ -1472,7 +1472,8 @@ const kidsWithCandies = (candies, extraCandies) => {
   // Your solution
 };
 
-console.log(kidsWithCandies([2, 2, 1, 1, 2], 1)); // [true, false, false, false, false];
+console.log(kidsWithCandies([12, 1, 12], 10)); // [true, false, true]
+console.log(kidsWithCandies([4, 2, 1, 1, 2], 1)); // [true, false, false, false, false]
 ```
 
 <details><summary>Solution</summary>
@@ -1530,9 +1531,9 @@ You are given an `m x n` integer grid `accounts`, where `accounts[i][j]` is the 
 Input: accounts = [[1,5],[7,3],[3,5]]
 Output: 10
 Explanation:
-1st customer has wealth = 6
-2nd customer has wealth = 10
-3rd customer has wealth = 8
+1st customer has wealth = 1 + 5 = 6
+2nd customer has wealth = 7 + 3 = 10
+3rd customer has wealth = 3 + 5 = 8
 The 2nd customer is the richest with a wealth of 10.
 ```
 
@@ -1583,7 +1584,8 @@ const maximumWealth = accounts => {
 
 The marketing team is spending way too much time typing in hashtags. Let's help them with our own Hashtag Generator! Here's the deal:
 
-- It must start with a hashtag `#`
+- It must start with a hashtag `#`.
+- Ignore spaces in the input.
 - All words must have their first letter capitalized.
 - If the final result is longer than 140 chars it must return `false`.
 - If the input or the result is an empty string it must return `false`.
@@ -1593,13 +1595,13 @@ const generateHashtag = str => {
   // Your solution
 };
 
-console.log(generateHashtag('JavaScript')); // "#JavaScript"
-console.log(generateHashtag('Do We have A Hashtag')); // "#DoWeHaveAHashtag"
+console.log(generateHashtag('JavaScript')); // #JavaScript
+console.log(generateHashtag('Do we have a Hashtag')); // #DoWeHaveAHashtag
+console.log(generateHashtag('    Hello     World   ')); // #HelloWorld
+console.log(generateHashtag('coding' + ' '.repeat(140) + 'for life')); // #CodingForLife
 console.log(generateHashtag('')); // false
 console.log(generateHashtag(' ')); // false
 console.log(generateHashtag('a'.repeat(140))); // false
-console.log(generateHashtag('a'.repeat(139))); // #Aaaaaaa...
-console.log(generateHashtag('coding' + ' '.repeat(140) + 'for life')); // "#CodingForLife")
 console.log(generateHashtag(' '.repeat(200))); // false
 ```
 
@@ -1607,12 +1609,21 @@ console.log(generateHashtag(' '.repeat(200))); // false
 
 ```js
 const generateHashtag = str => {
-  let hashtag = str
+  const hashtag = str
     .split(' ')
     .reduce(
       (tag, word) => tag + word.charAt(0).toUpperCase() + word.slice(1),
       '#'
     );
+
+  // Alternative solution
+  // const hashtag =
+  //   '#' +
+  //   str
+  //     .split(' ')
+  //     .map(ele => ele.charAt(0).toUpperCase() + ele.substring(1))
+  //     .join('');
+
   return hashtag.length === 1 || hashtag.length > 140 ? false : hashtag;
 };
 ```
@@ -1683,11 +1694,11 @@ console.log(count('aba')); // { a: 2, b: 1 }
 
 ```js
 const count = string => {
-  const result = {};
-  for (let char of string) {
-    result[char] = (result[char] || 0) + 1;
+  const frequency = {};
+  for (const char of string) {
+    frequency[char] = (frequency[char] || 0) + 1;
   }
-  return result;
+  return frequency;
 };
 ```
 
@@ -1763,7 +1774,7 @@ const getNumericValue = str => {
   const offset = 'a'.charCodeAt();
   const arr = [];
 
-  for (let char of str) {
+  for (const char of str) {
     arr.push(char.charCodeAt() - offset);
   }
 
