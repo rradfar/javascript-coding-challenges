@@ -1980,6 +1980,18 @@ const scramble = (str1, str2) => {
   return [...str2].every(
     letter => str2.split(letter).length <= str1.split(letter).length
   );
+
+  // Alternative solution
+  // const freq = {};
+  // for (const letter of str1) {
+  //   freq[letter] = (freq[letter] ?? 0) + 1;
+  // }
+
+  // for (const letter of str2) {
+  //   if (!freq[letter] || freq[letter] < 0) return false;
+  //   freq[letter]--;
+  // }
+  // return true;
 };
 ```
 
@@ -2010,8 +2022,13 @@ const wave = str => {
   const result = [];
   const len = str.length;
   for (let i = 0; i < len; i++) {
-    if (str[i] !== ' ')
-      result.push(str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1));
+    if (str[i] !== ' ') {
+      const word =
+        str.substring(0, i).toLowerCase() +
+        str[i].toUpperCase() +
+        str.substring(i + 1).toLowerCase();
+      result.push(word);
+    }
   }
   return result;
 };
