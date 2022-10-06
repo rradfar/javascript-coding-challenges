@@ -1879,18 +1879,17 @@ Create a function that takes a positive integer less than `4,000` as its input a
 
 Table of individual decimal places for your reference:
 
-```markdown
-Thousands Hundreds Tens Units
-1 M C X I
-2 MM CC XX II
-3 MMM CCC XXX III
-4 CD XL IV
-5 D L V
-6 DC LX VI
-7 DCC LXX VII
-8 DCCC LXXX VIII
-9 CM XC IX
-```
+|     | Thousands | Hundreds | Tens | Units |
+| --- | :-------- | :------- | :--- | :---- |
+| 1   | M         | C        | X    | I     |
+| 2   | MM        | CC       | XX   | II    |
+| 3   | MMM       | CCC      | XXX  | III   |
+| 4   |           | CD       | XL   | IV    |
+| 5   |           | D        | L    | V     |
+| 6   |           | DC       | LX   | VI    |
+| 7   |           | DCC      | LXX  | VII   |
+| 8   |           | DCCC     | LXXX | VIII  |
+| 9   |           | CM       | XC   | IX    |
 
 ```js
 const convertToRoman = number => {
@@ -1923,21 +1922,8 @@ console.log(convertToRoman(3999)); // MMM + CM + XC + IX = MMMCMXCIX
 ```js
 const convertToRoman = number => {
   const decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-  const romans = [
-    'M',
-    'CM',
-    'D',
-    'CD',
-    'C',
-    'XC',
-    'L',
-    'XL',
-    'X',
-    'IX',
-    'V',
-    'IV',
-    'I',
-  ];
+  // prettier-ignore
+  const romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
   let result = '';
 
   decimals.map((value, index) => {
